@@ -1,3 +1,4 @@
+# 配置文件
 # Site settings
 title: b1yat Blog
 SEOTitle: b1yat的博客 | b1yat Blog
@@ -10,6 +11,7 @@ baseurl: ""      # for example, '/blog' if your blog hosted on 'host/blog'
 github_repo: "https://github.com/Iamb1yat/Iamb1yat.github.io.git" # you code repository
 
 # Sidebar settings
+# 侧边栏
 sidebar: false                           # whether or not using Sidebar.
 sidebar-about-description: "Goals determine what you going to be!"
 sidebar-avatar: /img/about-BY-gentle.jpg      # use absolute URL, seeing it's used in both `/` and `/about/`
