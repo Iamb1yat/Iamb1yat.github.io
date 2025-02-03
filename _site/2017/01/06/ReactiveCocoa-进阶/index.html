@@ -164,7 +164,25 @@
         background-image: url('/img/post-bg-ios9-web.jpg');
     }
 
-    
+        {
+        % if page.header-mask %
+    }
+
+    header.intro-header .header-mask {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+
+        background: rgba(0, 0, 0, {
+                {
+                page.header-mask
+            }
+        });
+    }
+
+        {
+        % endif %
+    }
 </style>
 
 <header class="intro-header">
@@ -1887,13 +1905,13 @@ end
                     <script src="/js/md5.min.js"></script>
                     <script type="text/javascript">
                         var gitalk = new Gitalk({
-                            clientID: 'f2c84e7629bb1446c1a4',
-                            clientSecret: 'ca6d6139d1e1b8c43f8b2e19492ddcac8b322d0d',
-                            repo: 'qiubaiying.github.io',
-                            owner: 'qiubaiying',
-                            admin: ['qiubaiying'],
+                            clientID: 'Ov23liQi7VZTQjuuJYAc',
+                            clientSecret: 'feafc8798134db28fca708aa061681d1c4525172',
+                            repo: 'Iamb1yat.github.io',
+                            owner: 'Iamb1yat',
+                            admin: ['Iamb1yat'],
                             distractionFreeMode: true,
-                            id: md5(location.pathname)
+                        id: md5(location.pathname)
                         });
                         gitalk.render('gitalk-container');
                     </script>
@@ -1945,7 +1963,7 @@ end
                     
                     <li><a href="http://zhengwuyang.com">WY</a></li>
                     
-                    <li><a href="http://www.jianshu.com/u/e71990ada2fd">简书·BY</a></li>
+                    <li><a href="http://www.jianshu.com/">简书·BY</a></li>
                     
                     <li><a href="https://apple.com">Apple</a></li>
                     
@@ -1991,44 +2009,17 @@ end
                     
                     <!-- add jianshu add target = "_blank" to <a> by BY -->
                     
-                            <li>
-                                <a target="_blank" href="https://www.jianshu.com/u/e71990ada2fd">
-                                    <span class="fa-stack fa-lg">
-                                        <i class="fa fa-circle fa-stack-2x"></i>
-                                        <i class="fa  fa-stack-1x fa-inverse">简</i>
-                                    </span>
-                                </a>
-                            </li>
-                    
                     
 
                     <!-- add Weibo, Zhihu by Hux, add target = "_blank" to <a> by Hux -->
                     
-                    <li>
-                        <a target="_blank" href="https://www.zhihu.com/people/qiubaiying">
-                            <span class="fa-stack fa-lg">
-                                <i class="fa fa-circle fa-stack-2x"></i>
-                                <i class="fa  fa-stack-1x fa-inverse">知</i>
-                            </span>
-                        </a>
-                    </li>
-                    
                     
 
 
                     
-                    <li>
-                        <a target="_blank" href="https://www.facebook.com/baiying.qiu.7">
-                            <span class="fa-stack fa-lg">
-                                <i class="fa fa-circle fa-stack-2x"></i>
-                                <i class="fa fa-facebook fa-stack-1x fa-inverse"></i>
-                            </span>
-                        </a>
-                    </li>
-                    
                     
                     <li>
-                        <a target="_blank" href="https://github.com/qiubaiying">
+                        <a target="_blank" href="https://github.com/Iamb1yat">
                             <span class="fa-stack fa-lg">
                                 <i class="fa fa-circle fa-stack-2x"></i>
                                 <i class="fa fa-github fa-stack-1x fa-inverse"></i>
@@ -2045,7 +2036,7 @@ end
                     <iframe
                         style="margin-left: 2px; margin-bottom:-5px;"
                         frameborder="0" scrolling="0" width="100px" height="20px"
-                        src="https://ghbtns.com/github-btn.html?user=qiubaiying&repo=qiubaiying.github.io&type=star&count=true" >
+                        src="https://ghbtns.com/github-btn.html?user=Iamb1yat&repo=Iamb1yat.github.io&type=star&count=true" >
                     </iframe>
                 </p>
             </div>
@@ -2131,21 +2122,18 @@ end
 </script>
 
 
-<!-- Google Analytics -->
+<!-- Google Analytics 4 -->
 
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-90HLH39JCR"></script>
 <script>
-    // dynamic User by Hux
-    var _gaId = 'UA-90855596-1';
-    var _gaDomain = 'qiubaiying.top';
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
 
-    // Originial
-    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-
-    ga('create', _gaId, _gaDomain);
-    ga('send', 'pageview');
+  // 配置 GA4 测量 ID
+  gtag('config', 'G-90HLH39JCR', {
+    'anonymize_ip': true  // 可选：启用 IP 匿名化
+  });
 </script>
 
 
@@ -2154,7 +2142,7 @@ end
 
 <script>
     // dynamic User by Hux
-    var _baId = 'b50bf2b12b5338a1845e33832976fd68';
+    var _baId = '79acc0a77dadbaa5407fc812551b13a4';
 
     // Originial
     var _hmt = _hmt || [];
