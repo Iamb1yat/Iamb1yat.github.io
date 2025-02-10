@@ -1528,11 +1528,11 @@ pre .deletion {
   font-weight: 350;
 }
 .home-banner-container .content .description p i {
-  font-size: 2rem;
+  font-size: 1.5rem;
   font-style: normal;
 }
 .home-banner-container .content .description p span {
-  font-size: 2.1rem;
+  font-size: 1.575rem;
 }
 @media (max-width: 768px) {
   .home-banner-container .content .description {
