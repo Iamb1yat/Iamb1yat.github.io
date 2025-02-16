@@ -1,171 +1,116 @@
-:root {
-    --primary-color: #f1d5da;
-    --secondary-color: #68495b;
-    --yes-button-color: #d4818e;
-    --no-button-color: #6784b1;
-    --success-bg-color: #ffdae0;
-    --animation-duration: 0.3s;
-}
-
+/* 全局样式 */
 body {
-    background-color: var(--primary-color);
+    background-color: #f1d5da; /* 浅粉色 */
     text-align: center;
-    font-family: 'Segoe UI', Arial, sans-serif;
+    font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
-    overflow-x: hidden;
 }
 
+/* 主容器样式 */
 .container {
-    width: 90%;
-    max-width: 500px;
-    padding: 20px;
-    box-sizing: border-box;
+    width: 90%; /* 适应手机屏幕宽度 */
+    max-width: 500px; /* 最大宽度限制 */
 }
 
+/* 主图片样式 */
 #mainImage {
-    width: 100%;
-    max-width: 200px;
-    transition: transform var(--animation-duration) ease;
-    animation: float 3s ease-in-out infinite;
+    width: 100%; /* 图片宽度自适应容器 */
+    max-width: 200px; /* 最大宽度限制 */
+    transition: all 0.3s ease;
 }
 
-@keyframes float {
-    0%, 100% { transform: translateY(0); }
-    50% { transform: translateY(-10px); }
-}
-
+/* 标题样式 */
 h1 {
-    font-size: clamp(24px, 5vw, 32px);
-    color: var(--secondary-color);
-    margin: 20px 0;
-    text-shadow: 1px 1px 2px rgba(0,0,0,0.1);
+    font-size: 5vw; /* 字体大小根据视口宽度变化 */
+    color: #68495b;
+    margin: 20px 0; /* 增加上下间距 */
 }
 
+/* 按钮通用样式 */
 button {
-    font-size: clamp(16px, 4vw, 24px);
-    padding: 12px 25px;
+    font-size: 4vw; /* 字体大小根据视口宽度变化 */
+    padding: 10px 20px;
     border: none;
-    border-radius: 25px;
+    border-radius: 5px;
     cursor: pointer;
     margin: 10px;
-    transition: all var(--animation-duration) ease;
-    box-shadow: 0 3px 6px rgba(0,0,0,0.1);
+    transition: all 0.3s ease;
 }
 
-button:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 5px 10px rgba(0,0,0,0.15);
-}
-
+/* 确认按钮样式 */
 #yes {
-    background-color: var(--yes-button-color);
+    background-color: #d4818e; /* 粉色 */
     color: white;
 }
 
+/* 拒绝按钮样式 */
 #no {
-    background-color: var(--no-button-color);
+    background-color: #6784b1; /* 蓝色 */
     color: white;
     position: relative;
 }
 
+/* 确认后的全屏显示 */
 .yes-screen {
     position: fixed;
     top: 0;
     left: 0;
     width: 100vw;
     height: 100vh;
-    background-color: var(--success-bg-color);
+    background-color: #ffdae0; /* 粉色 */
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    animation: fadeIn 0.5s ease;
-}
-
-@keyframes fadeIn {
-    from { opacity: 0; }
-    to { opacity: 1; }
 }
 
 .yes-text {
-    font-size: clamp(28px, 7vw, 42px);
-    animation: bounce 1s ease infinite;
-}
-
-@keyframes bounce {
-    0%, 100% { transform: scale(1); }
-    50% { transform: scale(1.1); }
+    font-size: 7vw; /* 字体大小根据视口宽度变化 */
 }
 
 .yes-image {
-    width: 50%;
-    max-width: 300px;
-    animation: appear 1s ease;
+    width: 50%; /* 图片宽度自适应容器 */
+    max-width: 300px; /* 最大宽度限制 */
 }
 
-@keyframes appear {
-    from {
-        opacity: 0;
-        transform: scale(0.5);
-    }
-    to {
-        opacity: 1;
-        transform: scale(1);
-    }
-}
-
-.heart-animation {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    pointer-events: none;
-    z-index: 1;
-}
-
-/* 响应式设计优化 */
+/* 电脑端样式优化 */
 @media (min-width: 768px) {
+    body {
+        display: block;
+    }
+
     .container {
         position: absolute;
         top: 50%;
         left: 50%;
         transform: translate(-50%, -50%);
         width: auto;
-        max-width: 600px;
+        max-width: none;
     }
 
     #mainImage {
-        width: 250px;
+        width: 200px; /* 固定图片宽度 */
     }
 
-    .buttons {
-        display: flex;
-        justify-content: center;
-        gap: 20px;
-    }
-
-    button {
-        min-width: 120px;
-    }
-}
-
-/* 深色模式支持 */
-@media (prefers-color-scheme: dark) {
-    :root {
-        --primary-color: #2c2c2c;
-        --secondary-color: #f1d5da;
-        --success-bg-color: #1a1a1a;
-    }
-
-    body {
-        color: #ffffff;
+    h1 {
+        font-size: 28px; /* 固定字体大小 */
+        margin: 20px 0;
     }
 
     button {
-        box-shadow: 0 3px 6px rgba(255,255,255,0.1);
+        font-size: 18px; /* 固定字体大小 */
+    }
+
+    .yes-text {
+        font-size: 36px; /* 固定字体大小 */
+    }
+
+    .yes-image {
+        width: 300px; /* 固定图片宽度 */
     }
 }
