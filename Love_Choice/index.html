@@ -1,21 +1,34 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="一个可爱的表白页面">
+    <meta name="theme-color" content="#f1d5da">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="default">
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Expires" content="0">
     <title>可以成为我的恋人吗？</title>
+    <link rel="preload" href="images/heart.png" as="image">
+    <link rel="preload" href="images/hug.png" as="image">
     <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="images/heart.png" type="image/png">
 </head>
-<body>
-    <div class="container">
-        <img id="mainImage" src="images/heart.png" alt="爱心">
-        <h1 id="question">可以成为我的恋人吗？</h1>
-        <div class="buttons">
-            <button id="yes">可以</button>
-            <button id="no">不要</button>
-        </div>
-    </div>
 
-    <script src="script.js"></script>
+<body>
+    <main class="container">
+        <img id="mainImage" src="images/heart.png" alt="爱心" width="200" height="200">
+        <h1 id="question">可以成为我的恋人吗？</h1>
+        <div class="buttons" role="group" aria-label="选择按钮">
+            <button id="yes" type="button" aria-label="同意">可以</button>
+            <button id="no" type="button" aria-label="拒绝">不要</button>
+        </div>
+    </main>
+
+    <script src="script.js" defer></script>
 </body>
+
 </html>
